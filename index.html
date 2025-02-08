@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link 
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap" 
+            rel="stylesheet">
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="js/functions.js" defer></script>
+        <title>Vans</title>
+    </head>
+    <body>
+    
+        <header class="header">
+            <img class="header__logo" src="img/vans.png" alt="logo vans">
+            <nav class="header__menu">
+                <div class="header__user">
+                    <img id="cartMenu" src="img/shopping-bag.svg" class="header__icon">
+                    <span id="contador" class="contador">0</span>
+                    <img id="menuIcon" src="img/menu.svg" class="header__icon--secondary">
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+    
+            <section class="cont">
+                <article class="container">
+                    <div class="txt_wlcm">
+                        <h2>This is Off The Wall</h2>
+                        <button class="addclassics">ADQUIERELOS</button>
+                    </div>
+                    <div class="image-container">
+            
+                    </div>
+                </article>
+            </section>
+    
+            <section class="paralax">
+                <img id="tenns1Paralax" class="tenns1Paralax" src="img/vans tennis paralax.png" alt="tenns1Paralax">
+                <img id="tenns2Paralax"  class="tenns2Paralax" src="img/vans paralax.png" alt="tenns2Paralax">
+            </section>
+    
+           <section class="banner">
+                <h2 class="banner__title">Nuevos Productos</h2>
+                <p class="banner__description">conoce productos nuevos</p>
+           </section> 
+             
+           <section class="products">
+                <article class="product" >
+                    <img src="img/gorra full patch.png" alt="producto 1">
+                    <h3 class="product__title">Gorra Full Patch</h3>
+                    <p class="product__price">$ 1,100</p>
+                    <button class="addCart">Agregar al Carrito</button>
+                </article>
+    
+                <article class="product" data-id="1" data-name="Mochila Old Skool Check ">
+                    <img src="img/Mochila Old Skool Check.webp" alt="producto 2">
+                    <h3 class="product__title">Mochila Old Skool</h3>
+                    <p class="product__price">$ 3,000</p>
+                    <button class="addCart">Agregar al Carrito</button>
+                </article>
+    
+                <article class="product" data-id="2" data-name="Pantalon Authentic Chino Holgado" >
+                    <img src="img/Pantalón Authentic Chino holgado.webp" alt="producto 3">
+                    <h3 class="product__title">Pantalón Authentic</h3>
+                    <p class="product__price">$ 1,300</p>
+                    <button class="addCart">Agregar al Carrito</button>
+                </article>
+    
+                <article class="product" data-id="3" data-name="Parka Henrique">
+                    <img src="img/Parka Henrique.webp" alt="producto 4">
+                    <h3 class="product__title">Parka Henrique</h3>
+                    <p class="product__price">$ 1,000</p>
+                    <button class="addCart">Agregar al Carrito</button>
+                </article>
+                
+                <article class="product" data-id="4" data-name="Tennis Skate Old Skool" >
+                    <img src="img/Tenis Skate Old Skool.webp" alt="producto 5">
+                    <h3 class="product__title">Tennis Old Skool</h3>
+                    <p class="product__price">$ 1,900</p>
+                    <button class="addCart">Agregar al Carrito</button>
+                </article>
+    
+                <article class="product" data-id="5" data-name="Tenis Skate Sk8-Hi">
+                    <img src="img/Tenis Skate Sk8-Hi.webp" alt="producto 6">
+                    <h3 class="product__title">Tennis Skate Sk8-Hi</h3>
+                    <p class="product__price">$ 2,500</p>
+                    <button class="addCart">Agregar al Carrito</button>
+                </article>
+    
+                <article class="product" data-id="6" data-name="Sandalias La Costa MTE">
+                    <img src="img/Sandalias La Costa MTE.png" alt="producto 7">
+                    <h3 class="product__title">Sandalias La Costa MTE</h3>
+                    <p class="product__price">$ 980</p>
+                    <button class="addCart">Agregar al Carrito</button>
+                </article>
+    
+                <article class="product" data-id="7" data-name="Tenis UltraRange Neo VR3">
+                    <img src="img/Tenis UltraRange Neo VR3.png" alt="producto 8">
+                    <h3 class="product__title">Tennis UltraRange Neo VR3</h3>
+                    <p class="product__price">$ 3,000</p>
+                    <button class="addCart">Agregar al Carrito</button>
+                </article>
+           </section>
+    
+           <section id="cart" class="cart">
+                <button id="closeCart">×</button>
+                <h2 class="cart__title">CARRITO</h2>
+                <article class="listaCarrito">
+                    <ul id="cartList"></ul>
+                </article>
+            </section>
+    
+            <aside id="menuSide" class="menu_lateral">
+                <article id="closeMenu" class="close_button">
+                    <button>X</button>
+                </article>
+                <nav>
+                    <a href="#">Mi Perfil</a>
+                    <a href="#">Pedidos</a>
+                    <a href="#">Nostros</a>
+                </nav>
+            </aside>
+    
+        </main>
+    
+        <footer></footer>
+        
+    </body>
+</html>
