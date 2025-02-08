@@ -1,0 +1,683 @@
+$secondary-color: rgb(61, 61, 61);
+$primary-color: #ffffff; 
+$highlight-color: #970303;
+$font-family: 'Lexend', Arial, Helvetica, sans-serif;
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box-shadow($shadow-color: rgba(0, 0, 0, 0.2)) {
+  box-shadow: 5px 4px 8px $shadow-color;
+}
+
+
+
+
+
+
+// Placeholder estilos comunes 
+%text-center {
+  text-align: center;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  font-size: 15px;
+  font-weight: $font-weight-light;
+  color: $primary-color;
+  font-family: $font-family;
+  margin: 0;
+  background-image: linear-gradient(rgba(27, 27, 27, 0.75), rgba(27, 27, 27, 0.75)),  url(/img/bg.jpg);
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header {
+  width: 100%;
+  background-color: $secondary-color;
+  display: flex;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  color: #fff;
+  
+  &__logo {
+    width: 150px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    font-size: 0.9rem;
+    font-weight: $font-weight-bold;
+  }
+
+  &__user {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .contador {
+    position: absolute;
+    top: 25px;
+    background-color: #970303;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    text-align: center;
+    right: 70px;
+    align-content: center;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    width: 25px;
+    transition: all .25s ease;
+
+    &--secondary {
+      cursor: pointer;
+      width: 25px;
+      transition: all .25s ease;
+    }
+
+    &--secondary:hover {
+      opacity: 0.6;
+    }
+  }
+  &__icon:hover {
+    opacity: 0.6;
+  }
+}
+
+
+
+
+
+
+
+//menu lateral nav
+.menu_lateral {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 190px;
+  height: 120px;
+  border-radius: 30px 0px 0px 30px;
+  position: absolute;
+  right: -50%;   
+  top: 100px;
+  @include box-shadow(rgba(0, 0, 0, 0.3));
+  border: 3px solid #ebebeb;
+  backdrop-filter: blur(10px);
+  transition: all .25s ease;
+
+  .close_button {
+    display: flex;
+    align-self: end;
+    cursor: pointer;
+
+    button {
+      background-color: transparent;
+      margin-top: 5px;
+      color: $primary-color;
+      border-radius: 50%;
+      border: 0;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      padding-right: 30px;
+    }
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    height: 75%;
+    justify-content: space-evenly;
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      color: #ffff;
+    }
+
+    a:hover {
+      opacity: 0.6; 
+    }
+  }
+
+  &.open {
+    right: 0;
+  }
+}
+
+
+
+
+
+
+
+//section welcome
+.cont {
+  margin: 70px;
+  padding: 10px;
+  box-sizing: border-box;
+  
+  .container {
+    display: flex;
+    width: 100%;
+    background-color: #000000;
+    color: $primary-color;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 350px;
+
+    .txt_wlcm {
+      padding: 2%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   
+      h2 {
+        font-size: 500%;
+        margin: 4%;
+        text-align: center;
+        color: $primary-color;
+      }
+
+      .addclassics {
+        background-color: $secondary-color;
+        color: $primary-color;
+        font-size: 100%;
+        border: none;
+        cursor: pointer;
+        border-radius: 15px;
+        width: 40%;
+        height: 10%;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          color: $secondary-color;
+          background-color: $primary-color;
+        }
+      }
+    }
+
+    .image-container {
+      flex: 1.5;
+      background-image: url(/img/vans\ knu\ welcome.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      -webkit-clip-path: polygon(100% 0, 0 0, 100% 400%);
+              clip-path: polygon(100% 0, 0 0, 100% 400%);
+    }
+  }
+}
+
+
+
+
+
+
+//paralax
+.paralax {
+  margin-top: -7%;
+  position: absolute;
+  box-sizing: border-box;
+  padding: auto;
+
+  .tenns1Paralax {
+    margin-top: 6%;
+    width: 20%;
+    position: relative;
+    filter: drop-shadow(#000 1.5rem 2.5rem 8px);    
+  }
+  
+  .tenns2Paralax {
+    margin-top: -13%;
+    width: 20%;
+    position: relative;
+    margin-left: 79%;
+    filter: drop-shadow(#000 1rem 2.5rem 8px);    
+  }
+}
+
+
+
+
+
+  
+//banner
+.banner {
+  overflow: hidden;
+  margin: 80px auto;
+  width: 95%;
+  padding: 70px 0;
+  @extend %text-center;
+  background-image: url(/img/Sale_Rustic_Ecommerce_Shopping_Website_Banner_-_2022-07-26T095127.964_1200x1200.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include box-shadow(rgba(0, 0, 0, 0.3));
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 36px;
+    margin: 10px;
+    color: $highlight-color;
+  }
+
+  &__description {
+    width: 350px;
+    margin: 0 auto;
+    font-size: 25px;
+    color: $highlight-color;
+    opacity: 0.9;
+  }
+}
+
+
+
+
+
+
+
+
+//productos
+.products {
+  width: 80%;
+  margin: 90px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  .product {
+    @extend %text-center;
+
+    img {
+      width: 70%;
+      margin-bottom: 15px;
+    }
+
+    &__title {
+      font-weight: $font-weight-medium;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    &__price {
+      font-weight: $font-weight-light;
+      font-size: 15px;
+    }
+  
+    .addCart {
+      background: $primary-color;
+      color: #000;
+      border: 2px solid $secondary-color;
+      padding: 10px 13px;
+      border-radius: 3px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      display: inline-block;
+      margin: 20px;
+      border-radius: 21px;
+      font-weight: bold;
+    }
+    .addCart:hover {
+      color: $primary-color;
+      border: 2px solid $primary-color;
+    }
+    .addCart::after {
+      content: "";
+      background: $secondary-color; 
+      position: absolute;
+      z-index: -1;
+      padding: 16px 20px;
+      display: block;
+      left: -20%;
+      right: -20%;
+      top: 0;
+      bottom: 0;
+      transform: skewX(45deg) scale(0, 1);
+      transition: all 0.3s ease;
+    }
+    .addCart:hover::after {
+      transition: all 0.3s ease-in;
+      transform: skewX(45deg) scale(1, 1);
+    }
+  }
+}
+
+
+
+
+
+
+
+//carrito
+.cart {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 25px;
+    box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    right: -500%;   
+    top: 100px;
+    @include box-shadow(rgba(0, 0, 0, 0.3));
+    border: 3px solid #ebebeb;
+    border-radius: 26px;
+    backdrop-filter: blur(10px);
+    transition: all .25s ease;
+    overflow: hidden;
+
+    .listaCarrito {
+      overflow: auto;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px;
+    
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        padding: 5px 0;
+      }
+    }
+    
+    button {
+          background-color: transparent;
+          color: $primary-color;
+          border-radius: 50%;
+          border: 0;
+          align-self: end;
+          cursor: pointer;
+          font-size: 20px;
+    }
+
+    &__title {
+        width: 100%;
+        @extend %text-center;
+        font-weight: 600;
+        padding: 25px 0;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+        color: $primary-color;
+     
+        .item-info {
+          text-align: center;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          span:first-child {
+            font-weight: 500;
+          }
+        }
+
+        .cantidad-controles {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          justify-content: center;
+
+          button {
+            background-color: transparent;
+            border: none;
+            color: #000000;
+            padding: 2px 8px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+
+            &:hover {
+              color: #ffff;
+            }
+          }
+
+          .cantidad {
+            min-width: 25px;
+            text-align: center;
+          }
+        }
+         img {
+          width: 50px;
+          object-fit: contain;
+         }
+     
+        .remove {
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 5px;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+
+        &-description {
+          font-weight: $font-weight-medium;
+        }
+
+        i {
+            cursor: pointer;
+            img {
+                width: 25px;
+              }
+        }
+    }
+
+    &.show {
+      right: 0;
+    }
+}
+
+
+
+
+
+@media (hover: hover) {
+  .addCart:hover, 
+  .addclassics:hover{
+  }
+}
+
+
+
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 968px){ 
+  .cont .container .txt_wlcm h2 {
+    font-size: 400%;
+  }  
+
+  .cont .container .txt_wlcm .addclassics {
+    font-size: 90%;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  body {
+    overflow-x: hidden;
+  }
+  .header {
+    padding: 15px;
+    &__icon img {
+      width: 60px;
+    }
+    &__nav {
+      display: none;
+    }
+    .contador {
+      margin-right: -25px;
+    }
+  }
+  .banner {
+    max-width: 90%;
+  }
+  .cont .container .txt_wlcm h2 {
+    font-size: 50px;
+  }
+  .cont .container .txt_wlcm .addclassics {
+    font-size: 10px;
+    width: 70%;
+  }
+  .paralax {
+    display: none;
+  }
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    img {
+      width: 150%;
+      align-self: center;
+    }
+  }
+  .cart {
+    width: 70%;
+    top: 80px;
+    right: -900px; 
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 750px) {
+  .cont .container .txt_wlcm h2 {
+    font-size: 54px;
+  }
+  .cont .container .txt_wlcm .addclassics {
+    font-size: 15px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cont .container .txt_wlcm h2 {
+    font-size: 50px;
+  }
+  .cont .container .txt_wlcm .addclassics {
+    font-size: 75%;
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
+  .banner {
+    max-width: 90%;
+    &__title {
+      font-size: 18px;
+    }
+    &__description {
+      font-size: 16px;
+    }
+  }
+  .cont {
+    margin: 20px;
+  }
+  .cont .container .txt_wlcm h2 {
+    font-size: 280%;
+  }
+  .cont .container .txt_wlcm .addclassics {
+      font-size: 65%;
+      width: 70%;
+  }
+  .products {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    img {
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 10px;
+    }
+  }
+  .cart {
+    width: 70%;
+    box-shadow: none;
+    border: none;
+    align-items: center;
+    right: -900px; 
+    display: inline-block;
+    @include box-shadow(rgba(0, 0, 0, 0.3));
+    border: 3px solid #ebebeb;
+    border-radius: 26px;
+    overflow: auto;
+   
+    &__title {
+      padding: 15px 0;
+    }
+    &__item {
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      .remove {
+        align-self: center;
+      }
+      &-description {
+        margin: 0;
+      }
+      &-delete {
+        cursor: pointer;
+      }
+    }
+  }
+  .paralax {
+    display: none;
+  }
+  .menu_lateral {
+    width: 160px;
+  }
+}
